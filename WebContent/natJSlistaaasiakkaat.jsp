@@ -48,15 +48,18 @@ function tutkiKey(event){
 //Funktio tietojen hakemista varten
 //GET /asiakkaat/{hakusana}
 function haeTiedot(){
+	console.log("haeTiedot()");
 	document.getElementById("tbody").innerHTML = "";
 	fetch("asiakkaat/" + document.getElementById("hakusana").value,{//L‰hetet‰‰n kutsu backendiin
 		method: 'GET'
 	})
 	.then(function (response){//Odotetaan vastausta ja muutetaan JSON-vastaus objektiksi
+		console.log("odotetaan vastausta");
 		return response.json()
 	})
 	.then(function (responseJson){//Otetaan vastaan objekti responseJson-parametriss‰
 		var asiakkaat = responseJson.asiakkaat;
+		console.log("otetaan vastaan objekti");
 		var htmlStr="";
 		for(var i=0;i<asiakkaat.length;i++){
 			htmlStr+="<tr>";
@@ -69,6 +72,7 @@ function haeTiedot(){
 			htmlStr+="</tr>";
 		}
 		document.getElementById("tbody").innerHTML = htmlStr;
+		console.log("kirjoitetaan html");
 	})
 }
 

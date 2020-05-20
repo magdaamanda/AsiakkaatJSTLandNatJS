@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="scripts/main.js"></script>
 <title>Asiakkaan lisäys</title>
 </head>
 <body onkeydown="tutkiKey(event)">
