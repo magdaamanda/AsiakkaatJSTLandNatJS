@@ -53,16 +53,16 @@ function lisaaTiedot(){
 	var ilmo="";
 	var d = new Date();
 	if(document.getElementById("etunimi")).value.length<3){
-		document.getElementById("ilmo").innerHTML="Etunimi on liian lyhyt.";
+		ilmo="Etunimi on liian lyhyt.";
 		return;
 	}else if(document.getElementById("sukunimi").value.length<3){
-		document.getElementById("ilmo").innerHTML="Sukunimi on liian lyhyt.";
+		ilmo="Sukunimi on liian lyhyt.";
 		return;
 	}else if(document.getElementById("puhelin").value*1!=document.getElementById("puhelin").value){
-		document.getElementById("ilmo").innerHTML="Syötä puhelinnumeroksi vain numeroita.";
+		ilmo="Syötä puhelinnumeroksi vain numeroita.";
 		return;
 	}else if(document.getElementById("sposti").value<5){
-		document.getElementById("ilmo").innerHTML="Sähköposti on liian lyhyt.";
+		ilmo="Sähköposti on liian lyhyt.";
 	}
 	if(ilmo!=""){
 		document.getElementById("ilmo").innerHTML=ilmo;

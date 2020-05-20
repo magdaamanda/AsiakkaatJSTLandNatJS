@@ -67,7 +67,7 @@ function haeTiedot(){
 			htmlStr+="<td>"+asiakkaat[i].sukunimi+"</td>";
 			htmlStr+="<td>"+asiakkaat[i].puhelin+"</td>";
 			htmlStr+="<td>"+asiakkaat[i].sposti+"</td>";
-			htmlStr+="<td><a href='natJSmuutaasiakas.jsp?asiakas_id="+asiakkaat[i].asiakas_id"'>Muuta</a>&nbsp;";
+			htmlStr+="<td><a href='natJSmuutaasiakas.jsp?asiakas_id="+asiakkaat[i].asiakas_id+"'>Muuta</a>&nbsp;";
 	       	htmlStr+="<span class='poista' onclick=poista('"+asiakkaat[i].etunimi+"','"+asiakkaat[i].sukunimi"','"+asiakkaat[i].asiakas_id+"')>Poista</span></td>";
 			htmlStr+="</tr>";
 		}
